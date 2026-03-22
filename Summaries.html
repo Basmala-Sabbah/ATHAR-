@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التلاخيص</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: "Tajawal", sans-serif;
+            background-color: #fdf6e3;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #6d4c41;
+            font-family: 'Amiri';
+            font-size: 42px;
+        }
+
+        .search-box {
+            width: 90%;
+            max-width: 400px;
+            margin: 10px auto 30px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 25px;
+            border: 2px solid #8b6b4f;
+            outline: none;
+            text-align: right;
+        }
+
+        .summary-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .summary-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .summary-card h5 {
+            margin: 15px 0;
+            color: #6d4c41;
+            font-weight: bold;
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-go {
+            background-color: #8b6b4f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            flex: 1;
+        }
+
+        .btn-go:hover {
+            background-color: #6d4c41;
+        }
+
+        .heart {
+            font-size: 22px;
+            color: #8b6b4f;
+            cursor: pointer;
+        }
+
+        .heart.active {
+            color: #6d4c41;
+        }
+
+        #darkModeToggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: #8b6b4c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        body.dark {
+            background-color: #2f2a25;
+        }
+
+        body.dark h1,
+        body.dark h5,
+        body.dark a,
+        body.dark button {
+            color: #f5e6d3 !important;
+        }
+
+        body.dark .summary-card {
+            background-color: #3a342e;
+        }
+
+        body.dark .btn-go {
+            background-color: #6e543d;
+        }
+
+        body.dark .search-box input {
+            background-color: #3a342e;
+            color: #fff;
+            border-color: #6e543d;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 30px; }
+            .summary-card img { height: 150px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 26px; }
+            .summary-card img { height: 140px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<button id="darkModeToggle">🌙</button>
+
+<h1>ملخصاتي</h1>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="ابحث عن مادة...">
+</div>
+
+<div class="container">
+<div class="row g-4">
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/network.jpg"><h5>شبكات</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/121jScXwLYykQYRpEZSNThsVjuIAL-Fna?usp=sharing" target="_blank" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/datastructure.png"><h5>داتا ستركتشر</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1d8X3ydS-S_Kj3TiX9qTsTxzIsOTQgSXN?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/elctro.webp"><h5>الكترونيات رقمية</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1YVAcIezJLM1K8uC5cKt1pES8EBQ83R-1?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/database.png"><h5>داتا بيس</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1oxedLkVb6Lm8BPzzei6WtyNxsAFzvm6U?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/C++photo.png"><h5>++C</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1R8uOmnWm4md_xN6y7lpHP7z6QHWlI5nB?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/Tahlel.webp"><h5>التحليل العددي</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1IzUlB50LouhgoZZ14BMxwszvqkdiCrRj?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/probabilty.jpg"><h5>احتمالات</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1mP0Zed4_PnmEPo8xcHEqQ2iPC9uRLSPe?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/network.jpg"><h5>مختبر شبكات</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1N2RP7JVZfA6PS5TOcXDv6hEHsRH2PxBk?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/software.jpg"><h5>سوفتوير</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1XpRkb9HTnz5YAgo8xpZd0jVMvdb-Ldb7?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/coding.png"><h5>كودنج</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1rYWrjEccBVOpQZ63rFCwEy4dNRLPGedK?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/DSP.jfif"><h5>DSP</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1sinhqblvBhsauBg-UmCXLPWmUGNsfAgX?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/writting.jpg"><h5>الكتابة التقنية</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1fM8-P2czf5pUVd9qYGyoddiWexKmnzDb?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/CSS.jpg "><h5>أنظمة الاتصالات</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/10Wzy2T3uVrGdmRZnWVkxXCMQDcOXJgbz?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/Asemmbly.webp"><h5>أسمبلي</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1Y2e4fh06tt49XxwWhoOKw-mB9eUtGH4f?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/AIphoto.jfif"><h5>خوارزميات الذكاء</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/12GbkE6ERwPQea5cbZRxkd7nBFr9ODYGR?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/Machine.jfif"><h5>تعلم الالة</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1Z69dupz7b-zpyFlouOwl_JW1xtsYaXd_?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/Viber.jfif"><h5>فايبر</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1oYbexVQS7c8DRMC3vcF-_X-mdo5YwEjC?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/VHDL.png"><h5>فهدل</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1211UoR9U1jOnCboumDy8Fsf1bHYxFBa_?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/WEB.jfif"><h5>كتابي لتعلم الويب</h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/1_4f3fLVGyAvhIKBlHI5mc-OZBvEc1Za4?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+<div class="col-lg-4 col-md-6"><div class="summary-card"><img src="image/C++photo.png"><h5> C++ LAB </h5><div class="card-actions"><a href="https://drive.google.com/drive/folders/14khjTPBXFJCGjUDx5fYScai643CV4CH2?usp=sharing" class="btn-go">عرض الملخصات</a><i class="fa-regular fa-heart heart"></i></div></div></div>
+
+</div>
+</div>
+
+<script>
+// القلوب
+document.querySelectorAll('.heart').forEach(heart => {
+    heart.onclick = () => {
+        heart.classList.toggle('active');
+        heart.classList.toggle('fa-solid');
+        heart.classList.toggle('fa-regular');
+    };
+});
+
+// البحث
+const input = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".col-lg-4");
+
+function normalize(text) {
+    return text
+        .replace(/[أإآ]/g, "ا")
+        .replace(/ة/g, "ه")
+        .replace(/ى/g, "ي")
+        .replace(/ؤ/g, "و")
+        .replace(/ئ/g, "ي")
+        .replace(/\s+/g, "")
+        .toLowerCase();
+}
+
+input.addEventListener("input", function () {
+    const value = normalize(this.value);
+
+    cards.forEach(card => {
+        const title = card.querySelector("h5").textContent;
+        const normalizedTitle = normalize(title);
+
+        card.style.display = normalizedTitle.includes(value) ? "block" : "none";
+    });
+});
+
+// دارك مود
+const toggleBtn = document.getElementById("darkModeToggle");
+
+if (localStorage.getItem("mode") === "dark") {
+    document.body.classList.add("dark");
+    toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.onclick = () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("mode", "dark");
+        toggleBtn.textContent = "☀️";
+    } else {
+        localStorage.setItem("mode", "light");
+        toggleBtn.textContent = "🌙";
+    }
+};
+</script>
+
+</body>
+</html>

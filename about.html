@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ما هي منصة تبيان ؟</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+
+  <style>
+    ::selection{
+    background-color:#ebcab1 ;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Amiri', serif;
+      background-color: #f5e6d3;
+      color: #5a4634;
+      transition: 0.3s;
+    }
+
+    .aboutt {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 2;
+      margin: auto;
+      font-size: 18px;
+      max-width: 400;
+    }
+
+    h3 {
+      margin-top: 30px;
+    }
+
+    .about-button a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #5a4634;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .about-button a:hover {
+      opacity: 0.8;
+    }
+
+    /* زر الدارك */
+    #darkModeToggle {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: #8b6b4c;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+      transition: 0.3s;
+    }
+
+    #darkModeToggle:hover {
+      transform: scale(1.1);
+    }
+
+    /* وضع الدارك */
+    body.dark {
+      background-color: #2b2b2b;
+      color: #eee;
+    }
+
+    body.dark h1,
+    body.dark h2,
+    body.dark h3 {
+      color: #f5e6d3;
+    }
+
+    body.dark p {
+      color: #ddd;
+    }
+
+    body.dark .about-button a {
+      background-color: #f5e6d3;
+      color: #2b2b2b;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- زر الدارك مود -->
+  <button id="darkModeToggle">🌙</button>
+
+  <main>
+    <section class="aboutt">
+      <div class="container">
+        <div class="about-info">
+
+          <h1>أثـَـــــر</h1>
+          <h2>ما هي منصة أثـَـــــر؟</h2>
+
+          <p>
+            أنا بسملة صباح، مهندسة حاسوب طالبة جامعة زيكم تمامًا. بعرف قديش مرحلة الدراسة صعبة
+            أحيانًا، خصوصًا لما تكون المادة معقدة أو الشرح مش واضح، والأصعب من هيك إنك تلاقي ملخص يفهمك المادة بطريقة
+            بسيطة وسريعة.
+
+            كنت أضيّع وقت طويل وأنا بدوّر على ملخصات كويسة، وغالبًا ما ألاقي شي مناسب أو يكون الشرح مش واضح. من هون بدأت
+            أعمل ملخصاتي الخاصة، بطريقة مرتبة وسهلة عشان أفهم أنا قبل أي حدا.
+
+            ومع الوقت، فكرت: ليش ما أشارك هالملخصات مع غيري؟ يمكن تكون سبب إنها تسهّل على طالب غيري، أو توفر عليه وقت
+            وتعب أنا مريت فيه.
+
+            ومن هون إجت فكرة "أثــــــــر" 🤎
+            مكان بسيط، لكن هدفه كبير… إنه يساعدكم، يسهّل عليكم الدراسة، ويترك أثر حلو برحلتكم الجامعية.
+
+            كل ملخص هون معمول بمحبة، وتجربة حقيقية، عشان يوصلكم المعلومة بشكل أسهل وأوضح 🤎
+          </p>
+
+          <h3>اذا حابين تتعرفوا أكثر على موقعي ما عليكم غير تضغطوا على زر التالي</h3>
+
+          <div class="about-button">
+            <a href="Branchs.html">التالي</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById("darkModeToggle");
+
+    // تحميل الوضع المحفوظ
+    if (localStorage.getItem("mode") === "dark") {
+      document.body.classList.add("dark");
+      toggleBtn.textContent = "☀️";
+    }
+
+    toggleBtn.onclick = () => {
+      document.body.classList.toggle("dark");
+
+      if (document.body.classList.contains("dark")) {
+        localStorage.setItem("mode", "dark");
+        toggleBtn.textContent = "☀️";
+      } else {
+        localStorage.setItem("mode", "light");
+        toggleBtn.textContent = "🌙";
+      }
+    };
+  </script>
+
+</body>
+</html>

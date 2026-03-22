@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Amiri', serif;
+            background-color: #fef7dc; 
+            color: #5a4634;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 30px 0;
+            color: #5a4634;
+            font-size: 40px;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .contact-card {
+            background-color:  #614a33be;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 150px;
+            margin-top: 50px;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #f4e1d2;
+        }
+
+        @media (max-width: 768px) {
+            .contact-card {
+                min-height: 120px;
+                padding: 15px;
+            }
+            .contact-card h3 {
+                font-size: 18px;
+            }
+            .social-icons a {
+                font-size: 20px;
+            }
+        }
+
+        /* 🌙 زر الدارك */
+        #darkModeToggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: #8b6b4c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        /* 🌙 دارك مود بدون تعديل التصميم */
+        body.dark {
+            background-color: #2f2a25;
+        }
+
+        body.dark h1,
+        body.dark h3 {
+            color: #f5e6d3;
+        }
+
+        body.dark .contact-card {
+            background-color: #3a342e;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- 🌙 زر الدارك -->
+    <button id="darkModeToggle">🌙</button>
+
+    <h1>تواصل معنا</h1>
+
+    <div class="contact-container">
+        <div class="contact-card">
+            <h3>صفحة الانستغرام</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/basmasab2004?igsh=N3lwNTluaDgydTgz" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <h3>جيت هب</h3>
+            <div class="social-icons">
+                <a href="https://github.com/Basmala-Sabbah" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <h3>لينكد ان</h3>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/basmala-sabbah-055b09383" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <h3>تويتر</h3>
+            <div class="social-icons">
+                <a href="https://x.com/BsmltS67043" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById("darkModeToggle");
+
+        if (localStorage.getItem("mode") === "dark") {
+            document.body.classList.add("dark");
+            toggleBtn.textContent = "☀️";
+        }
+
+        toggleBtn.onclick = () => {
+            document.body.classList.toggle("dark");
+
+            if (document.body.classList.contains("dark")) {
+                localStorage.setItem("mode", "dark");
+                toggleBtn.textContent = "☀️";
+            } else {
+                localStorage.setItem("mode", "light");
+                toggleBtn.textContent = "🌙";
+            }
+        };
+    </script>
+
+</body>
+</html>

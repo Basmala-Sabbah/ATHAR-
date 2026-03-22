@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المصادر - الفرع العلمي</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background-color: #faf5dc;
+      color: #4b2e1f;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin: 40px 0 20px;
+      font-size: 40px;
+      color: #5b3c2b;
+    }
+
+    p.sub {
+      font-size: 18px;
+      color: #6b4b36;
+      margin-bottom: 40px;
+    }
+
+    .subjects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .subject-card {
+      background-color: #8b6545;
+      border-radius: 20px;
+      padding: 25px 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .subject-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    .subject-card h2 {
+      color: #fff3e0;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .links a {
+      display: block;
+      background-color: #f7e7ce;
+      color: #4b2e1f;
+      text-decoration: none;
+      padding: 10px 8px;
+      margin: 8px 0;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+
+    .links a:hover {
+      background-color: #e0c59a;
+      transform: scale(1.03);
+    }
+
+    /* === Responsive Design === */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+      p.sub {
+        font-size: 16px;
+      }
+      .subject-card {
+        padding: 20px 10px;
+      }
+      .subject-card h2 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        text-align: right;
+        padding: 0 10px;
+      }
+      h1 {
+        font-size: 26px;
+        text-align: center;
+      }
+      .subjects-container {
+        grid-template-columns: 1fr;
+      }
+      .subject-card {
+        border-radius: 15px;
+        padding: 18px;
+      }
+      .links a {
+        font-size: 15px;
+      }
+    }
+
+     /* 🌙 زر الدارك */
+        #darkModeToggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: #8b6b4c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        /* 🌙 دارك مود بدون تعديل التصميم */
+        body.dark {
+            background-color: #2f2a25;
+        }
+
+        body.dark h1,
+        body.dark h3 {
+            color: #f5e6d3;
+        }
+
+        body.dark .contact-card {
+            background-color: #3a342e;
+        }
+  </style>
+</head>
+
+<body>
+  <button id="darkModeToggle">🌙</button>
+  <h1>📚 واجباتي مع حلولي </h1>
+
+  <div class="subjects-container">
+    <div class="subject-card">
+      <h2> أنظمة الاتصالات </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/107VhIavkbFbX41QbVV8-RADJtdn8dafa?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+     <div class="subject-card">
+      <h2> الاقتصاد الهندسي </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/10O5rdo4tuTQFtKZg0b_Rh4_j-8vCVe-i?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+      <div class="subject-card">
+      <h2>  معمارية الحاسوب </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/1u9kplV3XfYirpY03eOv4-QcJ1qwf7htY?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+    <div class="subject-card">
+      <h2>   كودنج </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/1BdCqlExaFU56yp3uQp41SAvnayEcoYr6?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+    <div class="subject-card">
+      <h2>  DSP </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/1-xcOsV2HsWMzov5yJCy7Zue-BYnEtOcx?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+      <div class="subject-card">
+      <h2>  شبكات الحاسوب  </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/1LSw5m-nopc0vppBssHORm-pA700rsNYI?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+    <div class="subject-card">
+      <h2>   مختبر ديجتال  </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/1eXkYArbt7gxJ0GRQX6Jjlfsh05h63pKV?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+      <div class="subject-card">
+      <h2> الكتابة التقنية  </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/1rekCrRftUyc3_AxPmv1ojUZGOlOOCn5R?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+     <div class="subject-card">
+      <h2>  هندسة البرمجيات  </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/15GS29Bt8YGu_GVDErPq0DITKf6HXSjwS?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+    <div class="subject-card">
+      <h2>   مختبر شبكات   </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/1qTozINQxB25dfFHy-Bb_EmpdAXzL0Gpy?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+     <div class="subject-card">
+      <h2>    الاسعافات الأولية    </h2>
+      <div class="links">
+        <a href="https://drive.google.com/drive/folders/1WA8qNrqk3Tb_qAhw0cB0RIrXT7q5_rzI?usp=sharing" target="_blank">  اضغط هنا</a>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  
+   <script>
+        const toggleBtn = document.getElementById("darkModeToggle");
+
+        if (localStorage.getItem("mode") === "dark") {
+            document.body.classList.add("dark");
+            toggleBtn.textContent = "☀️";
+        }
+
+        toggleBtn.onclick = () => {
+            document.body.classList.toggle("dark");
+
+            if (document.body.classList.contains("dark")) {
+                localStorage.setItem("mode", "dark");
+                toggleBtn.textContent = "☀️";
+            } else {
+                localStorage.setItem("mode", "light");
+                toggleBtn.textContent = "🌙";
+            }
+        };
+    </script>
+</body>
+</html>

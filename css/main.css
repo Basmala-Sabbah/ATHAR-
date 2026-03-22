@@ -1,0 +1,541 @@
+@import './base.css';
+
+body{
+  background-color:#fef7dc ;
+}
+/*Start headder*/
+.headder{
+    background-image: url('../image/5b9c1de15f24332d636f064b89cfa8c9.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center ;
+    height: 100vh;
+}
+
+.background{
+    background-color: #a67c5276;
+    height: 100vh;
+    display: flex;
+}
+
+.about{
+    background-color:#fef7dc ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 310px;
+    width: 600px;
+    margin: auto;
+    align-items: center;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Amiri', serif;
+    font-size: 30px;
+    color: #6b4f3a;
+    box-shadow: 20px 20px 20px  #a5744f
+}
+.about p{
+    font-size: 30px;
+}
+
+.about a{
+    color:#fbf2d2 ;
+    background-color: #896345;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    
+}
+.about a:hover{
+ background-color: #6b4f3a;
+}
+
+@media screen and (max-width:666px) {
+  .about{
+    width:500px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width:533px) {
+  .about{
+    width:450px;
+    height: 300px;
+  }
+
+  .about p{
+    font-size: 25px;
+  }
+
+}
+
+@media screen and (max-width:486px) {
+  .about{
+    width:350px;
+    height: 230px;
+  }
+
+  .about h1{
+    font-size: 40px;
+  }
+  .about p{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width:382px) {
+  .about{
+    width:300px;
+    height: 210px;
+  }
+
+  .about h1{
+    font-size: 40px;
+  }
+  .about p{
+    font-size: 18px;
+  }
+  .about a{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:314px) {
+  .about{
+    width:240px;
+    height: 200px;
+  }
+
+  .about h1{
+    font-size: 30px;
+
+  }
+  .about p{
+    font-size: 14px;
+  }
+}
+
+
+
+/* الوضع الطبيعي (الفاتح) */
+body {
+  background-color: #fef7dc;
+  color: #5a4634;
+  transition: 0.3s;
+}
+
+/* الكارد */
+.about {
+  background-color: rgba(255, 248, 220, 0.9);
+  color: #5a4634;
+}
+
+/* الزر */
+.about a {
+  background-color: #8b6b4c;
+  color: white;
+}
+
+/* 🌙 الوضع الداكن */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* الكارد بالداكن */
+body.dark-mode .about {
+  background-color: rgba(30, 30, 30, 0.9);
+  color: #ffffff;
+}
+
+/* الزر بالداكن */
+body.dark-mode .about a {
+  background-color: #c2a27a;
+  color: #000;
+}
+
+/* تغميق الخلفية (لأن عندك صورة) */
+body.dark-mode .background {
+  filter: brightness(0.5);
+}
+
+/* زر التبديل */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #8b6b4c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 9999;
+}
+
+/*End headder*/
+
+
+
+
+
+.aboutt{
+    background-color:#fef7dc;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .about-info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+  }
+
+  .about-info h1{
+     font-family: 'Amiri', serif;
+     font-size: 65px;
+      color: #6b4f3a;
+  }
+
+  .about-info h2{
+     color: #6b4f3a;
+     font-size: 30px ;
+     font-family: 'Amiri', serif;
+
+  }
+
+  .about-info p{
+     font-family: 'Amiri', serif;
+     font-size: 20px;
+     background-color: #fef7dc ;
+     border:1px  transparent solid;
+     color: #473526;
+      }
+
+  .about-info h3{
+   font-family: 'Amiri', serif;
+   color: #6b4f3a;
+   font-size: 20px;
+  }
+
+.about-button{
+  margin-top: 50px;
+}
+
+  .about-button a{
+    color:#fbf2d2 ;
+    background-color: #473526;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family: 'Amiri', serif;
+    transition: background-color 0.3s ease;
+   
+}
+
+.about-button a:hover{
+ background-color: #6b4f3a;
+}
+
+
+@media screen and (max-width:1224px) {
+  .about-button{
+  margin-top: 30px;
+}
+}
+
+@media screen and (max-width:1093px) {
+  .about-button{
+  margin-top: 10px;
+}
+.about-info h1{
+  font-size: 50px;
+}
+}
+
+@media screen and (max-width:958px) {
+  .about-button{
+  margin-top: 10px;
+}
+.about-info h1{
+  font-size: 30px;
+}
+.about-info h2{
+  font-size: 20px;
+}
+}
+
+@media screen and (max-width:795px) {
+  .about-button{
+  margin-top: 10px;
+}
+.about-info h1{
+  font-size: 30px;
+}
+.about-info p{
+  font-size: 16px;
+  
+}
+}
+
+@media screen and (max-width:619px) {
+  .about-button{
+  margin-top: 10px;
+}
+.about-info h1{
+  font-size: 30px;
+}
+.about-info h3{
+  font-size: 15px;
+  
+}
+.about-info{
+  gap: 7px;
+}
+}
+
+@media screen and (max-width:509px) {
+  .about-button{
+  margin-top: 30px;
+}
+.about-info h1{
+  font-size: 30px;
+  margin-top: 20px;
+}
+.about-info p{
+  font-size: 13px;
+  
+}
+.about-info{
+  gap: 20px;
+}
+}
+
+@media screen and (max-width:445px) {
+  .about-button{
+  margin-top: 30px;
+}
+.about-info h1{
+  font-size: 30px;
+}
+.about-info p{
+  font-size: 13px;
+  
+}
+.about-button a{
+  font-size: 10px;
+}
+.about-info{
+  gap: 10px;
+}
+}
+
+
+@media screen and (max-width:403px) {
+  .about-button{
+  margin-top: 40px;
+}
+.about-info h1{
+  font-size: 30px;
+}
+.about-info p{
+  font-size: 12px;
+  
+}
+.about-button a{
+  font-size: 10px;
+}
+.about-info{
+  gap: 10px;
+}
+}
+
+@media screen and (max-width:374px) {
+  .about-button{
+  margin-top: 50px;
+}
+.about-info h1{
+  font-size: 40px;
+}
+.about-info p{
+  font-size: 10px;
+  
+}
+.about-button a{
+  font-size: 15px;
+}
+.about-info{
+  gap: 10px;
+}
+}
+
+
+@media screen and (max-width:334px) {
+  .about-button{
+  margin-top: 30px;
+}
+.about-info h1{
+  font-size: 40px;
+}
+.about-info p{
+  font-size: 10px;
+  
+}
+.about-button a{
+  font-size: 10px;
+}
+.about-info{
+  gap: 10px;
+}
+}
+
+@media screen and (max-width:308px) {
+  .about-button{
+  margin-top: 30px;
+}
+.about-info h1{
+  font-size: 30px;
+}
+.about-info p{
+  font-size: 10px;
+  
+}
+.about-info h3{
+  font-size: 10px;
+}
+.about-button a{
+  font-size: 10px;
+}
+.about-info{
+  gap: 10px;
+}
+}
+
+
+/* End about.html*/
+
+
+
+
+
+
+
+
+/* Start Tawjihi-branches*/
+  
+  .Taw-branches h2{
+    font-family: 'Amiri';
+    font-size: 50px;
+    background-color:#fef7dc;
+    text-align: center;
+     color: #6b4f3a;
+     
+  }
+
+  .Taw-branches{
+    background-color:#fef7dc;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .branch{
+    width: 30%;
+  }
+
+  .branch button{
+    padding: 20px 70px;
+    font-size: 20px;
+    font-family: 'Amiri';
+    border-radius: 40px;
+    background-color:#916b4e;
+    color:#fef7dc ;
+    width: 300px;
+  }
+  .branch button:hover{
+     background-color:#6d4d34;
+     cursor: pointer;
+  }
+
+  .Taw-branches .row{
+    gap: 50px;
+    margin-top: 150px;
+    flex-wrap: wrap;
+  }
+
+
+  @media screen and (max-width:1127px) {
+  .branch{
+    width: 20%;
+  }
+  .branch button{
+    padding: 10px 50px;
+    font-size: 20px;
+    width: 190px;
+  }
+  .tecnology{
+    margin: auto;
+  }
+
+
+}
+
+ @media screen and (max-width:872px) {
+  .branch{
+    width: 40%;
+  }
+  .branch button{
+    padding: 10px 50px;
+    font-size: 15px;
+    width: 180px;
+  }
+  .tecnology{
+    margin: auto;
+  }
+}
+
+ @media screen and (max-width:440px) {
+  .branch{
+    width: 100%;
+  }
+  .branch button{
+    padding: 10px 50px;
+    font-size: 15px;
+    width: 180px;
+  }
+  
+  body{
+    background-color:#fef7dc ;
+  }
+
+  .Taw-branches h2{
+    font-size: 40px;
+  }
+}
+
+ @media screen and (max-width:355px) {
+
+  .Taw-branches h2{
+    font-size: 30px;
+  }
+  .Taw-branches .row{
+    margin-top: 30px;
+  }
+}
+
+ /* End Tawjihi-branches*/
+
+
+
+
+
+
+
+ 
